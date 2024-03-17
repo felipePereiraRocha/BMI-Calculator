@@ -1,2 +1,2 @@
 # BMI-Calculator
- BMI calculator projects using REACT
+ BMI calculator project using REACT
