@@ -1,5 +1,5 @@
 body {
-    overflow-y: hidden;
+    overflow: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     margin: 0;
     font-size: 12px;
@@ -73,7 +73,7 @@ body {
     position: static;
     display: flex;
     width: 100vw;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     align-items: center;
     padding: auto 15%;
@@ -82,9 +82,8 @@ body {
 
 .links {
     display: flex;
-    flex-direction: row; 
-    gap: 1em;
-    margin-right: 2rem;
+    flex-direction: row;
+    gap: .6rem;
 }
 .links a {
     font-size: 2em;
@@ -93,7 +92,6 @@ body {
 
 .header-title {
     font-size: 2.5em;
-    margin-left: 2rem;
 }
 
 footer {
@@ -103,7 +101,7 @@ footer {
     justify-content: center;
     width: 100vw;
     margin-bottom: 0;
-    position: absolute;
+    position: fixed;
     bottom: 0%;
     margin-top: 0;
 }
