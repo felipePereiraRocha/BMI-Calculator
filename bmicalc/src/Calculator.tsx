@@ -31,10 +31,10 @@ export function Calculator() {
         <div className="main-div">
             <h1 className="title">BMI CALCULATOR</h1>
             <label className="labels" htmlFor="weight">Weight kg:</label>
-            <input type="number" id="weight" placeholder="70" min={0}></input>
+            <input type="number" id="weight" placeholder="70" min={0} tabIndex={1}></input>
             <label className="labels" htmlFor="height">Height cm:</label>
-            <input type="number" id="height" placeholder="170" min={0}></input>
-            <button onClick={getBMI}>Get BMI</button>
+            <input type="number" id="height" placeholder="170" min={0} tabIndex={2}></input>
+            <button onClick={getBMI} tabIndex={3}>Get BMI</button>
             <h1 className="bmi-display">{bmi}</h1>
             <p>note that BMI(Body Mass Index) is not a definite measure of a person's health</p>
         </div>
