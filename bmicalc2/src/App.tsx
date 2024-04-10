@@ -1,4 +1,4 @@
-
+import './index.css'
 import { Calculator } from "./Calculator"
 import { Footer } from "./Footer"
 import Heading from "./Heading"

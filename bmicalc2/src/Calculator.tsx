@@ -8,7 +8,7 @@ export function Calculator() {
     useEffect(() => {
         getBMI();
     }, [weight, height]);
-    
+
     function saveUserStats() {
         localStorage.setItem("userWeight", `${weight}`);
         localStorage.setItem("userHeight", `${height}`);
