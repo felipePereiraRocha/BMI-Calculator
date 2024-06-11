@@ -1,0 +1,56 @@
+@import url("./_header.scss");
+@import url("./_footer.scss");
+@import url("./_bmiDisplay.scss");
+
+body {
+    overflow:visible;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0;
+    font-size: 12px;
+    height: 100vh;
+}
+.main-div {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    min-width: 300px;
+    margin: auto;
+    border: 3px solid hsla(0, 0%, 0%, 0.781);
+    border-radius: 10px;
+    padding: 5% 10%;
+    margin-top: 2.5%;
+    margin-bottom: 25%;
+    
+    .title {
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    }
+    input {
+        font-size: 3em;
+        font-weight: 100;
+        border-radius: 10px;
+        margin-top: .2rem;
+    }
+    .labels {
+        font-weight: bold;
+        font-size: 3em;
+        text-align: left;
+        button {
+            font-size: 1em;
+            font-weight: bold;
+        }
+    }
+    p {
+        text-align: center;
+        font-size: 1.7em;
+        font-weight: light;
+        margin-bottom: 0;
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
