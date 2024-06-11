@@ -32,8 +32,8 @@ export function Calculator() {
         setWeight(document.querySelector("#weight")!.value);
         setHeight(document.querySelector("#height")!.value / 100);
 
-        weightSettings ? null : setWeight(prevWeight => weight * 2.205);
-        heightSettings ? null : setHeight(prevHeight => height *  30.48);
+        weightSettings ? null : setWeight(_prevWeight => weight / 2.205);
+        heightSettings ? null : setHeight(_prevHeight => height *  30.48);
 
         setBmi(Math.round(weight / Math.pow(height, 2) * 10) / 10);
 
@@ -47,9 +47,9 @@ export function Calculator() {
         <div className="main-div">
             <h1 className="title">BMI CALCULATOR</h1>
             <label className="labels" htmlFor="weight">Weight <button onClick={handleWeightMetric}>{weightSettings? "kg" : "lbs"}</button>:</label>
-            <input defaultValue={75} type="number" id="weight" placeholder="70" min={0}></input>
+            <input defaultValue={70} type="number" id="weight" placeholder="70" min={0}></input>
             <label className="labels" htmlFor="height">Height <button onClick={handleHeightMetric}>{heightSettings? "cm" : "ft"}</button>:</label>
-            <input defaultValue={0} type="number" id="height" placeholder="170" min={0}></input>
+            <input defaultValue={170} type="number" id="height" placeholder="170" min={0}></input>
             <button  className="get-bmi-button" onClick={getBMI}>Get BMI</button>
             <h1 className="bmi-display">{bmi}</h1>
             <p>note that BMI(Body Mass Index) is not a definite measure of a person's health</p>

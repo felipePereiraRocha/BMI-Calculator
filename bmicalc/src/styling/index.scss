@@ -2,9 +2,14 @@
 @import url("./_footer.scss");
 @import url("./_bmiDisplay.scss");
 
+html {
+     scroll-behavior: smooth;
+}
+
 body {
     overflow:visible;
     display: flex;
+    flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     margin: 0;
     font-size: 12px;
@@ -22,8 +27,7 @@ body {
     border-radius: 10px;
     padding: 5% 10%;
     margin-top: 2.5%;
-    margin-bottom: 25%;
-    
+    margin-bottom: 2.5%;
     .title {
     font-size: 4em;
     font-weight: bold;
