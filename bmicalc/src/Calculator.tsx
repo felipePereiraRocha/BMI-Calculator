@@ -43,13 +43,19 @@ export function Calculator() {
 
     };
 
+    document.addEventListener("keydown", event => {
+        if(event.key === "Enter") {
+            getBMI();
+        }
+    })
+
     return (
         <div className="main-div">
             <h1 className="title">BMI CALCULATOR</h1>
             <label className="labels" htmlFor="weight">Weight <button onClick={handleWeightMetric}>{weightSettings? "kg" : "lbs"}</button>:</label>
-            <input defaultValue={70} type="number" id="weight" placeholder="70" min={0}></input>
+            <input defaultValue={70} type="number" id="weight" placeholder="70" min={0} onChange={getBMI}></input>
             <label className="labels" htmlFor="height">Height <button onClick={handleHeightMetric}>{heightSettings? "cm" : "ft"}</button>:</label>
-            <input defaultValue={170} type="number" id="height" placeholder="170" min={0}></input>
+            <input defaultValue={170} type="number" id="height" placeholder="170" min={0} onChange={getBMI}></input>
             <button  className="get-bmi-button" onClick={getBMI}>Get BMI</button>
             <h1 className="bmi-display">{bmi}</h1>
             <p>note that BMI(Body Mass Index) is not a definite measure of a person's health</p>

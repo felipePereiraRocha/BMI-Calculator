@@ -2,7 +2,9 @@
 @import url("./_footer.scss");
 @import url("./_bmiDisplay.scss");
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
