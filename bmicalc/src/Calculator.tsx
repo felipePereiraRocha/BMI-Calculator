@@ -20,10 +20,10 @@ export function Calculator() {
     function handleUnit() {
 
         if(unitSettings === true) {
-            document.querySelector("#weight")!.value = Math.round(weight *  2.205);
+            document.querySelector("#weight")!.value = Math.round(document.querySelector("#weight")!.value *  2.205);
             document.querySelector("#height")!.value = Math.round(document.querySelector("#height")!.value / 2.54);
         } else {
-            document.querySelector("#weight")!.value = Math.round(weight /  2.205);
+            document.querySelector("#weight")!.value = Math.round(document.querySelector("#weight")!.value /  2.205);
             document.querySelector("#height")!.value = Math.round(document.querySelector("#height")!.value * 2.54);
         }
 
