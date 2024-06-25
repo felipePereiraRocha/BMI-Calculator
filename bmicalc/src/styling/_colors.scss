@@ -1,0 +1,43 @@
+.light-colors {
+    color: black;
+    background: #fff;
+    border-color: black;
+    &:visited {
+        color: black;
+    }
+    .bmi-display {
+        background-color: hsla(33, 100%, 88%, 0.562);
+    }
+    .links {
+        a {
+        color: rgb(110, 12, 180);
+        }
+    }
+}
+.dark-colors {
+    color: white;
+    background: #222222;
+    border-color: #fff;
+    &:visited {
+        color: white;
+    }
+    header {
+        color: white;
+        background: #222222;
+        border-color: #fff;
+    }
+    .bmi-display {
+        background-color: hsla(32, 20%, 40%, 0.562);
+    }
+    .links {
+        a {
+        color: rgb(234, 204, 255);
+    }
+}
+}
+
+.toggle-color-change {
+    position: fixed;
+    background: none;
+    border: none;
+}

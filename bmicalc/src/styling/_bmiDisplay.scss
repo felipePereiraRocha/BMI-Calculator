@@ -13,6 +13,11 @@ h1 {
     background-color: hsl(219, 100%, 54%);
     margin-top: 18px;
     transition: all 0.3s ease-in-out;
+    a {
+        text-decoration: none;
+        color: white;
+        cursor: auto;
+    }
     &:hover {
         background-color: hsl(219, 100%, 30%);
         transform: scale(102%);
