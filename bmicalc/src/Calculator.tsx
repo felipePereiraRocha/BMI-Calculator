@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { BiFemaleSign, BiMaleSign } from "react-icons/bi";
+import { lightDark } from "./types/Types";
 
-export function Calculator() {
+export function Calculator({lightMode}: lightDark) {
 
     const [weight, setWeight] = useState<number>(0);
     const [height, setHeight] = useState<number>(0);
@@ -65,14 +67,14 @@ export function Calculator() {
     })
 
     return (
-        <div className="main-div">
-            <h1 className="title">BMI CALCULATOR</h1>
-            <label className="labels" htmlFor="weight">Weight <button onClick={handleUnit}>{unitSettings ? "kg" : "lb"}</button>:</label>
+        <div className={`main-div ${lightMode? "light-colors": "dark-colors"}`}>
+            <h1 className={`title ${lightMode? "light-colors": "dark-colors"}`}>BMI CALCULATOR</h1>
+            <label className={`labels ${lightMode? "light-colors": "dark-colors"}`} htmlFor="weight">Weight <button onClick={handleUnit}>{unitSettings ? "kg" : "lb"}</button>:</label>
             <input defaultValue={70} type="number" id="weight" placeholder="70" min={0} onChange={getBMI}></input>
-            <label className="labels" htmlFor="height">Height <button onClick={handleUnit}>{unitSettings ? "cm" : "in"}</button>:</label>
+            <label className={`labels ${lightMode? "light-colors": "dark-colors"}`} htmlFor="height">Height <button onClick={handleUnit}>{unitSettings ? "cm" : "in"}</button>:</label>
             <input defaultValue={170} type="number" id="height" placeholder="170" min={0} onChange={getBMI}></input>
-            <button  className="get-bmi-button" onClick={getBMI}>Get BMI</button>
-            <h1 className="bmi-display">{bmi}</h1>
+            <button className="get-bmi-button" onClick={getBMI}><a href="#display">Get BMI</a></button>
+            <h1 className={`bmi-display ${lightMode? "light-colors": "dark-colors"}`} >{bmi}</h1>
             <p>note that BMI(Body Mass Index) is not a definite measure of a person's health</p>
         </div>
     );

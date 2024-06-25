@@ -1,11 +1,17 @@
-@import url("./_header.scss");
-@import url("./_footer.scss");
-@import url("./_bmiDisplay.scss");
+@import "./_header.scss";
+@import "./_footer.scss";
+@import "./_bmiDisplay.scss";
+@import "./colors";
 
 html {
      scroll-behavior: auto;
      display: flex;
      flex-direction: column;
+}
+
+.the-whole-thing {
+    width: 100%;
+    height: 100%;
 }
 
 body {
@@ -25,7 +31,7 @@ body {
     width: 40%;
     min-width: 300px;
     margin: auto;
-    border: 3px solid hsla(0, 0%, 0%, 0.781);
+    border: 3px solid #222;
     border-radius: 10px;
     padding: 5% 10%;
     margin-top: 2.5%;
@@ -59,4 +65,5 @@ body {
         padding-top: 0;
         margin-top: 0;
     }
+
 }
